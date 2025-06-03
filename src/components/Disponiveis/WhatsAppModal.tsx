@@ -18,7 +18,7 @@ export default function WhatsAppModal({
   const link = `https://wa.me/${phoneNumber}?text=Olá! Tenho interesse na arte "${artName}".`;
 
   return (
-    <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-70 z-50">
+    <div className="fixed  inset-0 flex items-center justify-center bg-black bg-opacity-70 z-50">
       <div className="bg-white rounded-xl p-8 max-w-[90%] text-center text-gray-900">
         <h3 className="text-xl font-semibold mb-4">Deseja falar via WhatsApp sobre:</h3>
         <p className="mb-6">
