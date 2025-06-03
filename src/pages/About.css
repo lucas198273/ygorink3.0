@@ -1,0 +1,20 @@
+/* about.css */
+
+/* Comportamento de rolagem suave */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Evita barras horizontais inesperadas */
+body, .about-wrapper {
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+/* Suavidade no carregamento visual */
+.about-wrapper {
+  backface-visibility: hidden;
+  transform: translateZ(0);
+  will-change: transform;
+}

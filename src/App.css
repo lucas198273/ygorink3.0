@@ -1,0 +1,35 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 1.5rem; /* Reduzido de 2rem para um layout mais compacto */
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: transform, box-shadow; /* Ajustado para otimizar box-shadow */
+  transition: box-shadow 200ms ease-in-out; /* Transição mais rápida e suave */
+}
+
+.logo:hover {
+  box-shadow: 0 0 1.5em rgba(100, 108, 255, 0.7); /* Substitui drop-shadow por box-shadow */
+}
+
+.logo.react:hover {
+  box-shadow: 0 0 1.5em rgba(97, 218, 251, 0.7); /* Ajustado para React */
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 12s ease-in-out; /* Reduzido de 20s para 12s, com ease-in-out */
+  }
+}
