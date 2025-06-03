@@ -36,7 +36,7 @@ export default function ArtistaPreview() {
       >
         {/* Imagem do artista */}
         <img
-          src="/assets/imgartista.jpeg"
+          src="/imgartista.png"
           alt="Artista"
           className="
             w-[300px] 

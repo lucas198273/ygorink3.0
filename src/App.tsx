@@ -11,6 +11,7 @@ import 'aos/dist/aos.css'; // <-- importante importar o CSS
 import Disponiveis from './components/Disponiveis/Disponiveis';
 import ScrollTop from './components/ScrollTop/ScrollTop';
 import ServiceSection from './components/ServiceSection/ServiceSection';
+import AboutCp from './components/AboutCp/AboutCp';
 export default function App() {
     useEffect(() => {
     AOS.init({
@@ -32,6 +33,7 @@ export default function App() {
               <ArtistaPreview />
               <ServiceSection />
               <Disponiveis />
+              <AboutCp />
 
              
               <SocialMediaSection />

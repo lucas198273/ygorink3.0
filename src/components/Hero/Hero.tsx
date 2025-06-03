@@ -26,23 +26,37 @@ export default function Hero() {
     <section className="relative w-full min-h-screen bg-black text-white flex items-center justify-center px-6 py-12 md:px-12">
       <div className="flex flex-col-reverse gap-12 w-full max-w-7xl md:flex-row md:gap-16 items-center">
         {/* Texto + Botão */}
-        <div className="w-full md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left">
+        <div
+          className="w-full md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left"
+          data-aos="fade-right"
+          data-aos-duration="1000"
+        >
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
             Arte, identidade <br /> e expressão em cada traço
           </h1>
-          <p className="text-lg md:text-xl text-gray-300 mb-6">
+          <p
+            className="text-lg md:text-xl text-gray-300 mb-6"
+            data-aos="fade-right"
+            data-aos-delay="200"
+          >
             Tatuagem com segurança, qualidade e respeito. Faça parte dessa jornada artística.
           </p>
           <button
             onClick={() => setIsOpen(true)}
             className="inline-block px-8 py-3 bg-red-600 hover:bg-red-500 transition text-white font-semibold rounded-md"
+            data-aos="fade-up"
+            data-aos-delay="400"
           >
             Agendar Sessão
           </button>
         </div>
 
         {/* Imagem do Artista */}
-        <div className="w-full md:w-1/2 flex items-center justify-center">
+        <div
+          className="w-full md:w-1/2 flex items-center justify-center"
+          data-aos="fade-left"
+          data-aos-duration="1000"
+        >
           <img
             src="/assets/img1.png"
             alt="Artista tatuador"
@@ -53,9 +67,11 @@ export default function Hero() {
 
       {/* Modal de Agendamento */}
       {isOpen && (
-        <div className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50 px-4">
+        <div
+          className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50 px-4"
+          data-aos="zoom-in"
+        >
           <div className="bg-white rounded-xl p-6 w-full max-w-md shadow-xl relative">
-            {/* Botão de Fechar */}
             <button
               onClick={() => setIsOpen(false)}
               className="absolute top-3 right-4 text-gray-500 hover:text-black text-2xl"

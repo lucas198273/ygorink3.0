@@ -1,4 +1,7 @@
 import useEmblaCarousel from "embla-carousel-react";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 interface TattooItem {
@@ -11,7 +14,11 @@ interface CategorySectionProps {
 }
 
 export default function CategorySection({ category }: CategorySectionProps) {
-  // Cadastro interno dos itens por categoria
+  // Inicia AOS uma vez quando o componente monta
+  useEffect(() => {
+    AOS.init({ duration: 800, once: true });
+  }, []);
+
   const tattoos: Record<string, TattooItem[]> = {
     fineline: [
       { name: "Retrato de Leão", image: "/assets/fineline/fnl1.jpeg" },
@@ -41,23 +48,21 @@ export default function CategorySection({ category }: CategorySectionProps) {
       { name: "Navegação", image: "/assets/blackwork/blk13.jpeg" },
       { name: "Navegação", image: "/assets/blackwork/blk14.jpeg" },
     ],
-    // Se precisar de novas categorias, basta adicionar aqui
   };
 
-  // Pega apenas os itens da categoria informada (ou array vazio)
   const items: TattooItem[] = tattoos[category] ?? [];
-
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
 
   return (
     <div className="mb-16">
-      {/* Título da categoria */}
-      <h3 className="text-3xl font-semibold text-center text-white mb-6 capitalize">
+      <h3
+        className="text-3xl font-semibold text-center text-white mb-6 capitalize"
+        data-aos="fade-up"
+      >
         {category}
       </h3>
 
       <div className="relative">
-        {/* Embla viewport */}
         <div className="overflow-hidden w-full" ref={emblaRef}>
           <div className="flex gap-4 px-2">
             {items.map((item, idx) => (
@@ -65,10 +70,12 @@ export default function CategorySection({ category }: CategorySectionProps) {
                 key={idx}
                 className="
                   flex-none 
-                  w-[60%]      sm:w-1/2 
-                  md:w-1/3     lg:w-1/4 
+                  w-[60%] sm:w-1/2 
+                  md:w-1/3 lg:w-1/4 
                   xl:w-1/5 
                 "
+                data-aos="fade-up"
+                data-aos-delay={idx * 50}
               >
                 <div className="
                   bg-[#111] 
@@ -104,7 +111,7 @@ export default function CategorySection({ category }: CategorySectionProps) {
           </div>
         </div>
 
-        {/* Botões de navegação */}
+        {/* Navegação */}
         <button
           onClick={() => emblaApi?.scrollPrev()}
           className="

@@ -1,50 +1,70 @@
-// src/components/SocialMediaSection.tsx
+// src/components/SocialMedia.tsx
 import React from 'react';
-import { FaYoutube, FaTiktok, FaInstagram } from 'react-icons/fa';
+import { FaInstagram, FaTiktok, FaYoutube } from 'react-icons/fa';
 
-const SocialMediaSection: React.FC = () => {
+const SocialMedia: React.FC = () => {
   return (
-    <section className="bg-black text-white py-12 px-4">
-      <div className="max-w-4xl mx-auto text-center">
-        <img
-          src="/assets/img2.webp"
-          alt="DJ KAZAK"
+    <section className="bg-black text-white py-16 px-6">
+      <div className="max-w-5xl mx-auto flex flex-col items-center text-center">
+        <div
+          className="w-52 h-52 mb-8"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+        >
+          <img
+            src="/imgartista.png"
+            alt="Ygor Tattoo"
+            className="w-full h-full object-contain"
+          />
+        </div>
 
-          className="mx-auto mb-6 w-32 h-32 rounded-full object-cover shadow-lg"
-        />
-        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-blue-500">
-          Conecte-se com DJ KAZAK
+        <h2
+          className="text-4xl font-semibold mb-3 text-white tracking-wide"
+          data-aos="fade-up"
+          data-aos-delay="150"
+        >
+          Artista Ygor
         </h2>
-        <p className="mb-6 text-lg text-gray-300">
-          Siga o artista nas redes sociais e acompanhe os lançamentos mais recentes.
+
+        <p
+          className="text-gray-400 max-w-md mb-8"
+          data-aos="fade-up"
+          data-aos-delay="300"
+        >
+          Acompanhe os trabalhos mais recentes, bastidores e novidades nas redes sociais.
         </p>
-        <div className="flex justify-center gap-6 flex-wrap">
+
+        <div
+          className="flex gap-10 flex-wrap justify-center"
+          data-aos="zoom-in"
+          data-aos-delay="400"
+        >
           <a
-            href="https://youtube.com/@listen_kazak?si=WWjfE2QBzP4pNmdH"
+            href="https://instagram.com/ygor_tattoo"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex flex-col items-center text-white hover:text-blue-500 transition-transform transform hover:scale-110"
+            className="flex items-center gap-2 hover:text-pink-500 transition-transform hover:scale-105"
           >
-            <FaYoutube className="w-10 h-10 mb-2" />
-            <span className="text-sm">YouTube</span>
+            <FaInstagram className="w-7 h-7" />
+            <span>Instagram</span>
           </a>
           <a
-            href="https://www.tiktok.com/@listen_kazak?_t=ZM-8wW1Kr6GF4H&_r=1"
+            href="https://www.tiktok.com/@ygor_tattoo"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex flex-col items-center text-white hover:text-blue-500 transition-transform transform hover:scale-110"
+            className="flex items-center gap-2 hover:text-white/70 transition-transform hover:scale-105"
           >
-            <FaTiktok className="w-10 h-10 mb-2" />
-            <span className="text-sm">TikTok</span>
+            <FaTiktok className="w-7 h-7" />
+            <span>TikTok</span>
           </a>
           <a
-            href="https://www.instagram.com/listen_kazak?igsh=MTJyM2M2eWtuc29qag%3D%3D&utm_source=qr"
+            href="https://www.youtube.com/@ygor_tattoo"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex flex-col items-center text-white hover:text-blue-500 transition-transform transform hover:scale-110"
+            className="flex items-center gap-2 hover:text-red-500 transition-transform hover:scale-105"
           >
-            <FaInstagram className="w-10 h-10 mb-2" />
-            <span className="text-sm">Instagram</span>
+            <FaYoutube className="w-7 h-7" />
+            <span>YouTube</span>
           </a>
         </div>
       </div>
@@ -52,4 +72,4 @@ const SocialMediaSection: React.FC = () => {
   );
 };
 
-export default SocialMediaSection;
+export default SocialMedia;
