@@ -1,6 +1,6 @@
 // src/components/SocialMedia.tsx
 import React from 'react';
-import { FaInstagram, FaTiktok, FaYoutube } from 'react-icons/fa';
+import { FaInstagram } from 'react-icons/fa';
 
 const SocialMedia: React.FC = () => {
   return (
@@ -12,7 +12,7 @@ const SocialMedia: React.FC = () => {
           data-aos-duration="1000"
         >
           <img
-            src="/imgartista.png"
+            src=" assets/artista/imgartista.png"
             alt="Ygor Tattoo"
             className="w-full h-full object-contain"
           />
@@ -48,24 +48,8 @@ const SocialMedia: React.FC = () => {
             <FaInstagram className="w-7 h-7" />
             <span>Instagram</span>
           </a>
-          <a
-            href="https://www.tiktok.com/@ygor_tattoo"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 hover:text-white/70 transition-transform hover:scale-105"
-          >
-            <FaTiktok className="w-7 h-7" />
-            <span>TikTok</span>
-          </a>
-          <a
-            href="https://www.youtube.com/@ygor_tattoo"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 hover:text-red-500 transition-transform hover:scale-105"
-          >
-            <FaYoutube className="w-7 h-7" />
-            <span>YouTube</span>
-          </a>
+      
+        
         </div>
       </div>
     </section>

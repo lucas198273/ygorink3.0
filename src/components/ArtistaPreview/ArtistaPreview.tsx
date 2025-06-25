@@ -12,7 +12,7 @@ export default function ArtistaPreview() {
   }, []);
 
   const goToAboutPage = () => {
-    navigate("/sobre");
+    navigate("/about");
   };
 
   return (
@@ -36,7 +36,7 @@ export default function ArtistaPreview() {
       >
         {/* Imagem do artista */}
         <img
-          src="/imgartista.png"
+          src="/assets/artista/imgartista.png"
           alt="Artista"
           className="
             w-[300px] 

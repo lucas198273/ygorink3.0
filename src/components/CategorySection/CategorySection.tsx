@@ -105,7 +105,6 @@ export default function CategorySection({ category }: CategorySectionProps) {
                     "
                   />
                 </div>
-                <p className="mt-2 text-center text-white text-sm">{item.name}</p>
               </div>
             ))}
           </div>
