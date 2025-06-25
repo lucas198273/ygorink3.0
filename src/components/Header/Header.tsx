@@ -33,7 +33,7 @@ export default function Header() {
         {/* Menu Desktop */}
         <nav className="hidden md:flex space-x-8 font-medium">
           <Link to="/" className="hover:text-green-400 transition">Início</Link>
-          <Link to="/about" className="hover:text-green-400 transition">Contato</Link>
+          <Link to="/about" className="hover:text-green-400 transition">About</Link>
         </nav>
       </div>
 

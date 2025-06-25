@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <footer className="bg-black text-white py-8 px-4 mt-10">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center">
-        <h2 className="text-xl font-bold mb-4 md:mb-0">DJ KAZAK</h2>
+        <h2 className="text-xl font-bold mb-4 md:mb-0">Ygor Tatto</h2>
 
         <div className="flex space-x-6 text-2xl">
           <a
@@ -15,14 +15,7 @@ export default function Footer() {
           >
             <FaInstagram />
           </a>
-          <a
-            href="https://youtube.com/@listen_kazak?si=WWjfE2QBzP4pNmdH"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-red-500 transition"
-          >
-            <FaYoutube />
-          </a>
+  
         
         </div>
       </div>
